@@ -28,7 +28,7 @@ function updateWindowSize() {
   let cardScaleBase = 0;
   let normalize = (base) => {
     let reBase = Math.round(Math.abs(base)*1000)/1000
-    return 1 - (reBase/12)
+    return 1 - (reBase/10)
   }
 
 // crazy state code
@@ -46,9 +46,9 @@ function mainLoop(fps){
     // console.log("card03: "+ card03scale)
     // console.log("---------")
 
-    card01.style.transform = (`scale(${card01scale})`)
-    card02.style.transform = (`scale(${card02scale+0.01})`)
-    card03.style.transform = (`scale(${card03scale})`)
+    card01.style.transform = (`scale(${card01scale+0.01})`)
+    card02.style.transform = (`scale(${card02scale+0.03})`)
+    card03.style.transform = (`scale(${card03scale+0.01})`)
     
     
     
