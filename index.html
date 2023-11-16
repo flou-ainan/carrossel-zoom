@@ -34,8 +34,6 @@
     }
 
     .scroll{
-        padding-left: 100vw;
-        padding-right: 100vw;
         display: flex;
         padding: 0.5vw;
         align-items: center;
@@ -43,6 +41,9 @@
         flex-wrap: nowrap;
         scroll-behavior: smooth;
         column-gap: 0.5vw;
+    }
+    .spacer{
+      width: 20vw;
     }
 
     .red{background: red}
@@ -57,9 +58,11 @@
   </header>
     <div class="container" id="container" >
         <div class="scroll" id="scroll">
+            <div class="spacer"></div>
             <div class="card" id="c01"></div>
             <div class="card" id="c02"></div>
             <div class="card" id="c03"></div>
+            <div class="spacer"></div>
         </div>
     </div>
     <script src="script.js"></script>

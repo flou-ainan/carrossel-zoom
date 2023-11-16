@@ -7,6 +7,8 @@ console.log("before: "+container.scrollLeft)
 let offset = -(container.offsetWidth - card.offsetWidth) / 2;
 container.scrollLeft = offset;
 console.log("after: "+container.scrollLeft)
+let isMobile = true
+
 
 //window resize event listener
 function updateWindowSize() {
@@ -14,6 +16,7 @@ function updateWindowSize() {
     offset = -(container.offsetWidth - card.offsetWidth) / 2;
     container.scrollLeft = offset;
     console.log(offset/width)
+    
   }
    window.addEventListener("resize", updateWindowSize);
   
@@ -33,12 +36,12 @@ function updateWindowSize() {
 
 // crazy state code
 function mainLoop(fps){
-    cardScaleBase = (container.scrollLeft/container.offsetWidth*2.32*2)-1
+    cardScaleBase = (container.scrollLeft/container.offsetWidth*1.19*2)-1
     card01scale = normalize(cardScaleBase+1)
     card02scale = normalize(cardScaleBase)
     card03scale = normalize(cardScaleBase-1)
 
-    console.log(cardScaleBase)
+    console.log(container.scrollLeft/container.offsetWidth)
 
     // console.log("base: "+ cardScaleBase)
     // console.log("card01: "+ card01scale)
